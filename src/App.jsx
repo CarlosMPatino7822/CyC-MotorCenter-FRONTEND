@@ -7,6 +7,7 @@ import DashboardPage from './pages/DashboardPage';
 import UsersPage from './pages/UsersPage';
 import CarsPage from './pages/CarsPage';
 import BikesPage from './pages/BikesPage';
+import ProfilePage from './pages/ProfilePage';
 import './App.css';
 
 function AppLayout({ children }) {
@@ -30,6 +31,12 @@ function App() {
       <Route path="/dashboard" element={
         <ProtectedRoute>
           <AppLayout><DashboardPage /></AppLayout>
+        </ProtectedRoute>
+      } />
+
+      <Route path="/profile" element={
+        <ProtectedRoute>
+          <AppLayout><ProfilePage /></AppLayout>
         </ProtectedRoute>
       } />
 

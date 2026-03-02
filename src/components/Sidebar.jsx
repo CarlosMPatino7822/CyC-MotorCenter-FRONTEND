@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { MdDashboard, MdPeople, MdDirectionsCar, MdLogout, MdDirectionsBike } from 'react-icons/md';
+import { MdDashboard, MdPeople, MdDirectionsCar, MdLogout, MdDirectionsBike, MdPerson } from 'react-icons/md';
 import './Sidebar.css';
 
 export default function Sidebar() {
@@ -37,6 +37,11 @@ export default function Sidebar() {
                 <NavLink to="/dashboard" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
                     <span className="sidebar-link-icon"><MdDashboard /></span>
                     Dashboard
+                </NavLink>
+
+                <NavLink to="/profile" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+                    <span className="sidebar-link-icon"><MdPerson /></span>
+                    Mi Perfil
                 </NavLink>
 
                 <span className="sidebar-section-title">Gestión</span>
